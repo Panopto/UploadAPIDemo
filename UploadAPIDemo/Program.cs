@@ -15,7 +15,7 @@ namespace UploadAPIDemo
 {
     class Program
     {
-        private static bool selfSigned = true; // Target server is a self-signed server
+        private static bool selfSigned = false; // Target server is a self-signed server
         private static bool hasBeenInitialized = false;
         private static long DEFAULT_PARTSIZE = 1048576 * 5; // Size of each upload in the multipart upload process
         private static string filePath = "foobar.mp4";

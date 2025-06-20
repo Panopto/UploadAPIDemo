@@ -56,6 +56,8 @@ namespace UploadAPIDemo
             if (userKey == null || password == null)
                 throw new InvalidDataException("Invalid user name or password");
 
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+
             // set up the request
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(
                 "https://" + server + "/Panopto/PublicAPI/4.6/Auth.svc");
